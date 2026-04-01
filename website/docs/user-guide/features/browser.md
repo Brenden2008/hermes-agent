@@ -11,6 +11,7 @@ Hermes Agent includes a full browser automation toolset with multiple backend op
 
 - **Browserbase cloud mode** via [Browserbase](https://browserbase.com) for managed cloud browsers and anti-bot tooling
 - **Browser Use cloud mode** via [Browser Use](https://browser-use.com) as an alternative cloud browser provider
+- **Driver.dev cloud mode** via [Driver.dev](https://driver.dev) for cloud browsers with stealth, geolocation, and window sizing
 - **Local Chrome via CDP** — connect browser tools to your own Chrome instance using `/browser connect`
 - **Local browser mode** via the `agent-browser` CLI and a local Chromium installation
 
@@ -22,7 +23,7 @@ Pages are represented as **accessibility trees** (text-based snapshots), making 
 
 Key capabilities:
 
-- **Multi-provider cloud execution** — Browserbase or Browser Use, no local browser needed
+- **Multi-provider cloud execution** — Browserbase, Browser Use, or Driver.dev — no local browser needed
 - **Local Chrome integration** — attach to your running Chrome via CDP for hands-on browsing
 - **Built-in stealth** — random fingerprints, CAPTCHA solving, residential proxies (Browserbase)
 - **Session isolation** — each task gets its own browser session
@@ -53,6 +54,31 @@ BROWSER_USE_API_KEY=***
 ```
 
 Get your API key at [browser-use.com](https://browser-use.com). Browser Use provides a cloud browser via its REST API. If both Browserbase and Browser Use credentials are set, Browserbase takes priority.
+
+### Driver.dev cloud mode
+
+To use Driver.dev cloud browsers with stealth, geolocation, and custom window sizes:
+
+```bash
+# Add to ~/.hermes/.env
+DRIVER_API_KEY=***
+```
+
+Get your API key at [app.driver.dev](https://app.driver.dev). Sessions run on hosted infrastructure with CAPTCHA solving enabled by default. Optional settings:
+
+```bash
+# Browser window size (e.g. "1920x1080")
+DRIVER_WINDOW_SIZE=1920x1080
+
+# Target country (2-letter ISO code)
+DRIVER_COUNTRY=US
+
+# SOCKS5 proxy URL
+DRIVER_PROXY_URL=socks5://user:pass@proxy.com:1080
+
+# Enable ad-blocking
+DRIVER_ADBLOCK=true
+```
 
 ### Local Chrome via CDP (`/browser connect`)
 

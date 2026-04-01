@@ -84,6 +84,9 @@ For native Anthropic auth, Hermes prefers Claude Code's own credential files whe
 | `BROWSERBASE_API_KEY` | Browser automation ([browserbase.com](https://browserbase.com/)) |
 | `BROWSERBASE_PROJECT_ID` | Browserbase project ID |
 | `BROWSER_USE_API_KEY` | Browser Use cloud browser API key ([browser-use.com](https://browser-use.com/)) |
+| `DRIVER_API_KEY` | Driver.dev cloud browser API key ([driver.dev](https://driver.dev/)) |
+| `DRIVER_WINDOW_SIZE` | Driver.dev browser window size as `WIDTHxHEIGHT` (e.g. `1920x1080`) |
+| `DRIVER_COUNTRY` | Driver.dev target country (2-letter ISO code, e.g. `US`) |
 | `BROWSER_CDP_URL` | Chrome DevTools Protocol URL for local browser (set via `/browser connect`, e.g. `ws://localhost:9222`) |
 | `BROWSER_INACTIVITY_TIMEOUT` | Browser session inactivity timeout in seconds |
 | `FAL_KEY` | Image generation ([fal.ai](https://fal.ai/)) |

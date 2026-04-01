@@ -78,6 +78,7 @@ except Exception:
 from tools.browser_providers.base import CloudBrowserProvider
 from tools.browser_providers.browserbase import BrowserbaseProvider
 from tools.browser_providers.browser_use import BrowserUseProvider
+from tools.browser_providers.driver_dev import DriverDevProvider
 
 # Camofox local anti-detection browser backend (optional).
 # When CAMOFOX_URL is set, all browser operations route through the
@@ -233,6 +234,7 @@ def _get_cdp_override() -> str:
 _PROVIDER_REGISTRY: Dict[str, type] = {
     "browserbase": BrowserbaseProvider,
     "browser-use": BrowserUseProvider,
+    "driver": DriverDevProvider,
 }
 
 _cached_cloud_provider: Optional[CloudBrowserProvider] = None

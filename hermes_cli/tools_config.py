@@ -274,6 +274,15 @@ TOOL_CATEGORIES = {
                 "post_setup": "browserbase",
             },
             {
+                "name": "Driver.dev",
+                "tag": "Cloud browser with stealth, geolocation & proxies",
+                "env_vars": [
+                    {"key": "DRIVER_API_KEY", "prompt": "Driver.dev API key", "url": "https://app.driver.dev"},
+                ],
+                "browser_provider": "driver",
+                "post_setup": "browserbase",
+            },
+            {
                 "name": "Camofox",
                 "tag": "Local anti-detection browser (Firefox/Camoufox)",
                 "env_vars": [
